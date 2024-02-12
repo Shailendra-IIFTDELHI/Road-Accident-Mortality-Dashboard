@@ -7,7 +7,7 @@ library(shinydashboard)
 library(plotly)
 
 # Set working directory
-work_dir_path <- 'D:/IIFT ACADEMIC/3rd trimester/RTSM'
+work_dir_path <- 'Data.csv'
 setwd(work_dir_path)
 
 # Load and prepare data (replace "Data.csv" with your actual file name)
