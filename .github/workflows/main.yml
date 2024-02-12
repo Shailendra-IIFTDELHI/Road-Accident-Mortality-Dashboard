@@ -1,0 +1,27 @@
+name: Run R script
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  run_r_script:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Set up R
+      uses: r-lib/actions/setup-r@v1
+      with:
+        r-version: 4.x
+
+    - name: Install R packages
+      run: |
+        R -e 'install.packages(c("shiny", "tidyverse", "shinydashboard", "plotly"))'
+
+    - name: Run R script
+      run: Rscript code.r  # Replace with the path to your R script
+
