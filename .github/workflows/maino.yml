@@ -20,7 +20,7 @@ jobs:
 
     - name: Install R packages
       run: |
-        R -e 'install.packages(c("shiny", "shinydashboard", "plotly"))'
+        R -e 'install.packages(c("tidyverse","shiny", "shinydashboard", "plotly"))'
 
     - name: Run R script
       run: Rscript code.r  # Replace with the path to your R script
